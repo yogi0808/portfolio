@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menu.classList.toggle("active")
 
+        logo.style.zIndex = logo.style.zIndex === "8" ? "10" : "8";
+
     });
 
 
@@ -138,8 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tl.to(logo, {
         ease: true,
         scale: 1,
-        top: 55 + 'px',
+        top: 10 + 'px',
         left: 64 + 'px',
+        x: 0,
+        y: 0,
         color: "#dadada",
     })
 
