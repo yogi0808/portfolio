@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(raf);
 
 
-    //     const mouse = document.querySelector('.mouse-circul');
-    //     const logo = document.querySelector(".logo");
-    //     const links = document.querySelectorAll("ul li a");
+    const mouse = document.querySelector('.mouse-circul');
+    const logo = document.querySelector(".logo");
+    const links = document.querySelectorAll("ul li a");
     const menuBtn = document.querySelector(".menu-btn");
-    //     const menu = document.querySelector(".nav-links");
+    const menu = document.querySelector(".nav-links");
     //     const svgs = document.querySelectorAll(".svg");
 
     //     // mouse circul
@@ -119,58 +119,58 @@ document.addEventListener("DOMContentLoaded", () => {
     //     })
 
 
-    //     // gsap timeline for logo
-    //     let tl = gsap.timeline({
+    // gsap timeline for logo
+    let tl = gsap.timeline({
 
-    //         scrollTrigger: {
-    //             trigger: "#home",
-    //             pin: true,
-    //             start: "top top",
-    //             end: "77% top",
-    //             scrub: 2,
-    //             // markers: true,
-    //         }
-    //     })
-
-
-    //     // gsap animation for logo
-
-    //     tl.to(logo, {
-    //         ease: true,
-    //         scale: 1,
-    //         top: 55 + 'px',
-    //         left: 64 + 'px',
-    //         color: "#dadada",
-    //     })
+        scrollTrigger: {
+            trigger: "#home",
+            pin: true,
+            start: "top top",
+            end: "77% top",
+            scrub: 2,
+            // markers: true,
+        }
+    })
 
 
+    // gsap animation for logo
 
-    //     // gsap animation for nav links
-    //     gsap.from("li", {
-    //         stagger: .2,
-    //         opacity: 0,
-    //         y: "20px",
-    //         duration: 0.7,
-    //         ease: Power2,
-    //     })
+    tl.to(logo, {
+        ease: true,
+        scale: 1,
+        top: 55 + 'px',
+        left: 64 + 'px',
+        color: "#dadada",
+    })
 
 
-    //     // gsap animation for hero text
-    //     gsap.from(".hero-text", {
-    //         stagger: .2,
-    //         opacity: 0,
-    //         y: "40px",
-    //         duration: 1,
-    //         ease: Power2,
-    //     })
 
-    //     // gsap animation for hero img
-    //     gsap.from(".hero-img img", {
-    //         scale: -1,
-    //         rotate: -360,
-    //         duration: 1,
-    //         ease: Power2,
-    //     })
+    // gsap animation for nav links
+    gsap.from("li", {
+        stagger: .2,
+        opacity: 0,
+        y: "20px",
+        duration: 0.7,
+        ease: Power2,
+    })
+
+
+    // gsap animation for hero text
+    gsap.from(".hero-text", {
+        stagger: .2,
+        opacity: 0,
+        y: "40px",
+        duration: 1,
+        ease: Power2,
+    })
+
+    // gsap animation for hero img
+    gsap.from(".hero-img img", {
+        scale: -1,
+        rotate: -360,
+        duration: 1,
+        ease: Power2,
+    })
 
 
 

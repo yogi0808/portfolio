@@ -48,6 +48,9 @@ body {
     justify-content: end;
     width: 100vw;
     height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 20px 64px;
     background: rgba(255, 255, 255, 0.1);
     background: linear-gradient(90deg, rgba(255, 56, 42, .4) 0%, rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.25) 55%, rgba(245, 168, 61, .5) 100%);
@@ -64,12 +67,12 @@ body {
     color: #fff;
     font-size: 1.6rem;
     text-decoration: none;
-    /* scale: 2.5; */
+    scale: 2.5;
     font-weight: 800;
     transform: translateY(-50%);
     position: absolute;
-    left: 64px;
-    top: 30px;
+    left: 20%;
+    bottom: -630%;
     z-index: 2;
     font-family: "Montserrat", sans-serif;
     cursor: none;
@@ -117,6 +120,77 @@ body {
     stroke-dasharray: 60 105 60 300;
     stroke-dashoffset: -90;
 }
+
+#home {
+    height: 100vh;
+    width: 100%;
+    display: flex
+}
+
+#home .hero-text {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    font-size: 1.3rem;
+    user-select: none;
+}
+
+#home .hero-text .logo-space {
+    font-size: 6rem;
+    color: transparent;
+}
+
+#home .hero-text .logo-space span {
+    color: #dadada;
+    font-size: 1.3rem;
+}
+
+#home .hero-text .bg-dotes {
+    z-index: -1;
+    position: absolute;
+    height: 250px;
+    width: 45%;
+}
+
+#home .hero-text .bg-dotes .red {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 0;
+    top: 0;
+    background-color: #ff382a;
+    filter: blur(60px);
+}
+
+#home .hero-text .bg-dotes .yellow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0;
+    bottom: 0;
+    background-color: #f5a83d;
+    filter: blur(60px);
+}
+
+#home .hero-img {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .hero-img img {
+    width: 75%;
+    filter: drop-shadow(0 0 30px rgb(51, 10, 202));
+    border-radius: 38%;
+}
+
 
 
 
