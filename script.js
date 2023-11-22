@@ -110,6 +110,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    // about img circle blend mode chenge
+    document.querySelector("#about .img img").addEventListener("mouseenter", () => {
+        mouse.style.mixBlendMode = 'normal'
+    })
+    document.querySelector("#about .img img").addEventListener("mouseleave", () => {
+        mouse.style.mixBlendMode = 'difference'
+    })
+
+
+
     // svg circle scale
     svgs.forEach(svg => {
         svg.addEventListener("mouseenter", () => {
@@ -158,6 +168,19 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: Power2,
     })
 
+    // gsap animation on svgs 
+    gsap.to(svgs, {
+        scale: 1,
+        y: 0,
+        scrollTrigger: {
+            trigger: ".svgs",
+            start: "-30% 85%",
+            end: "bottom bottom",
+            scrub: 2,
+            // markers: true,
+        }
+    })
+
 
     // gsap animation for hero text
     gsap.from(".hero-text", {
@@ -174,6 +197,31 @@ document.addEventListener("DOMContentLoaded", () => {
         rotate: -360,
         duration: 1,
         ease: Power2,
+    })
+
+    // gsap animation for about img
+    gsap.to("#about .img img", {
+        scale: 1,
+        y: 0,
+        scrollTrigger: {
+            trigger: "#about .img",
+            start: "top 85%",
+            end: "70% bottom",
+            // markers: true,
+            scrub: 2,
+        }
+    })
+
+    // gsap animation for about texts
+    gsap.to("#about .info p", {
+        lineHeight: 1.2,
+        scrollTrigger: {
+            trigger: "#about .info",
+            start: "top 80%",
+            end: "70% bottom",
+            // markers: true,
+            scrub: 2,
+        }
     })
 
 

@@ -1,3 +1,8 @@
+/* @font-face {
+    font-family: arial;
+    src: url();
+} */
+
 *,
 *::after,
 *::before {
@@ -13,6 +18,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
     color: #dadada;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -22,10 +28,12 @@ body {
 
 ::-webkit-scrollbar-track {
     border-radius: 10px;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar {
     width: 7px;
+    background-color: transparent;
 }
 
 .mouse-circul {
@@ -217,8 +225,77 @@ body {
 }
 
 #skills {
-    height: 100vh;
     width: 100%;
+    padding: 100px 0;
+}
+
+#skills .svgs {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: none;
+    border-right: none;
+}
+
+#skills h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#skills .svgs .svg {
+    height: 60px;
+    cursor: none;
+    transform: translateY(50px);
+    scale: 0.7;
+}
+
+#about {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+}
+
+#about .img {
+    width: 40%;
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .img img {
+    height: 90%;
+    border-radius: 20px;
+    scale: 0.5;
+    transform: translateY(100px);
+}
+
+#about .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    width: 60%;
+    height: 100%;
+    gap: 15px;
+}
+
+#about .info p {
+    font-size: 1.2rem;
+    line-height: 0;
+    font-weight: 300;
+}
+
+#about .info h2 {
+    font-size: 2.8rem;
 }
 
 
