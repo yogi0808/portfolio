@@ -10,7 +10,13 @@
 
 <body>
 
-    <div class="mouse-circul"></div>
+    <div class="mouse-circul">
+        <svg class="arrow" width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
 
     <a href="#home" class="logo">
         Yogesh
@@ -21,7 +27,7 @@
 
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -184,7 +190,21 @@
         </div>
     </section>
 
+    <section id="work">
+        <div class="title">
+            <h1>My Work</h1>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <h3>Luxury Photo & Frames</h3>
+            </div>
+            <div class="project light">
+                <h3>Rock Paper Scissors Game</h3>
+            </div>
+        </div>
+    </section>
 
+    <section class="demo"></section>
 
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>

@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".nav-links");
     const svgs = document.querySelectorAll(".svg");
+    const projects = document.querySelectorAll("#work .project")
 
     // mouse circul
     let mouseX = -25
@@ -107,6 +108,21 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     document.querySelector(".hero-img img").addEventListener("mouseleave", () => {
         mouse.style.scale = 1
+    })
+
+
+    // project circle scale and arrow show 
+    projects.forEach(project => {
+
+        project.addEventListener("mouseenter", () => {
+            mouse.style.scale = 4
+            mouse.classList.add('arrow')
+        })
+        project.addEventListener("mouseleave", () => {
+            mouse.style.scale = 1
+            mouse.classList.remove('arrow')
+        })
+
     })
 
 
