@@ -28,46 +28,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("ul li a");
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".nav-links");
-    //     const svgs = document.querySelectorAll(".svg");
+    const svgs = document.querySelectorAll(".svg");
 
-    //     // mouse circul
-    //     let mouseX = -25
-    //     let mouseY = -25
+    // mouse circul
+    let mouseX = -25
+    let mouseY = -25
 
-    //     window.addEventListener("mousemove", (e) => {
+    window.addEventListener("mousemove", (e) => {
 
-    //         mouseX = event.clientX
-    //         mouseY = event.clientY
+        mouseX = event.clientX
+        mouseY = event.clientY
 
-    //         window.requestAnimationFrame(mouseMove);
-    //     })
+        window.requestAnimationFrame(mouseMove);
+    })
 
-    //     const mouseMove = () => {
+    const mouseMove = () => {
 
-    //         if (window.innerWidth > 770) {
+        if (window.innerWidth > 770) {
 
-    //             mouse.style.left = mouseX - 9 + "px"
-    //             mouse.style.top = mouseY - 5 + "px"
+            mouse.style.left = mouseX - 9 + "px"
+            mouse.style.top = mouseY - 5 + "px"
 
-    //         } else {
+        } else {
 
-    //         }
-
-
-    //     }
-
-    //     mouseMove()
+        }
 
 
-    //     // nav link circle scale
-    //     links.forEach(link => {
-    //         link.addEventListener("mouseenter", () => {
-    //             mouse.style.scale = 2
-    //         })
-    //         link.addEventListener("mouseleave", () => {
-    //             mouse.style.scale = 1
-    //         })
-    //     })
+    }
+
+    mouseMove()
+
+
+    // nav link circle scale
+    links.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            mouse.style.scale = 2
+        })
+        link.addEventListener("mouseleave", () => {
+            mouse.style.scale = 1
+        })
+    })
 
 
 
@@ -92,33 +92,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    //     // logo circle scale
-    //     logo.addEventListener("mouseenter", () => {
-    //         mouse.style.scale = 4
-    //     })
-    //     logo.addEventListener("mouseleave", () => {
-    //         mouse.style.scale = 1
-    //     })
+    // logo circle scale
+    logo.addEventListener("mouseenter", () => {
+        mouse.style.scale = 4
+    })
+    logo.addEventListener("mouseleave", () => {
+        mouse.style.scale = 1
+    })
 
 
-    //     // hero img circle scale
-    //     document.querySelector(".hero-img img").addEventListener("mouseenter", () => {
-    //         mouse.style.scale = 7
-    //     })
-    //     document.querySelector(".hero-img img").addEventListener("mouseleave", () => {
-    //         mouse.style.scale = 1
-    //     })
+    // hero img circle scale
+    document.querySelector(".hero-img img").addEventListener("mouseenter", () => {
+        mouse.style.scale = 7
+    })
+    document.querySelector(".hero-img img").addEventListener("mouseleave", () => {
+        mouse.style.scale = 1
+    })
 
 
-    //     // svg circle scale
-    //     svgs.forEach(svg => {
-    //         svg.addEventListener("mouseenter", () => {
-    //             mouse.style.scale = 4
-    //         })
-    //         svg.addEventListener("mouseleave", () => {
-    //             mouse.style.scale = 1
-    //         })
-    //     })
+    // svg circle scale
+    svgs.forEach(svg => {
+        svg.addEventListener("mouseenter", () => {
+            mouse.style.scale = 4
+        })
+        svg.addEventListener("mouseleave", () => {
+            mouse.style.scale = 1
+        })
+    })
 
 
     // gsap timeline for logo
