@@ -232,6 +232,7 @@ body {
 #skills .svgs {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 10px 0;
     background: rgba(255, 255, 255, 0.15);
@@ -361,6 +362,29 @@ body {
         width: auto;
         height: 90%;
     }
+
+    #about {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #about .img {
+        width: 100%;
+        height: auto;
+    }
+
+    #about .img img {
+        width: 50%;
+        height: auto;
+    }
+
+    #about .info {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+
 }
 
 @media (max-width: 430px) {
@@ -371,6 +395,19 @@ body {
 
     #home .hero-text .logo-space {
         font-size: 4.8rem
+    }
+
+    #about .img img {
+        width: 100%;
+    }
+
+    #about .info .none {
+        display: none;
+    }
+
+    #about .info p {
+        font-size: 1rem;
+        line-height: 0.8;
     }
 }
 
