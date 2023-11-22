@@ -270,6 +270,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #about .img img {
@@ -277,6 +278,33 @@ body {
     border-radius: 20px;
     scale: 0.5;
     transform: translateY(100px);
+}
+
+#about .img .bg-color {
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    z-index: -1;
+}
+
+#about .img .bg-color .red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #ff382a;
+    filter: blur(60px);
+}
+
+#about .img .bg-color .yellow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #f5a83d;
+    filter: blur(60px);
 }
 
 #about .info {
