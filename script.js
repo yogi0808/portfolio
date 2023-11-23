@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".nav-links");
     const svgs = document.querySelectorAll(".svg");
-    const projects = document.querySelectorAll("#work .project")
+    const pro = document.querySelector(".pro");
 
     // mouse circul
     let mouseX = -25
@@ -58,6 +58,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     mouseMove()
+
+
+    let proHTML = "";
+
+    renderProject()
+
+    pro.innerHTML = proHTML;
+
+    function renderProject() {
+        works.forEach(work => {
+            proHTML += `
+            <div class="project ${work.class}" onclick="window.location.href='hello.html'">
+                <img src="${work.mimg}" alt="project">
+                <h3>${work.pname}</h3>
+            </div>
+            `
+
+            return proHTML
+        })
+    }
 
 
     // nav link circle scale
@@ -112,14 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // project circle scale and arrow show 
-    projects.forEach(project => {
+    document.querySelectorAll(".project").forEach(pro => {
 
-        project.addEventListener("mouseenter", () => {
+        pro.addEventListener("mouseenter", () => {
             mouse.style.scale = 4
             mouse.classList.add('arrow')
 
         })
-        project.addEventListener("mouseleave", () => {
+        pro.addEventListener("mouseleave", () => {
             mouse.style.scale = 1
             mouse.classList.remove('arrow')
         })

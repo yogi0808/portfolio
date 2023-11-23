@@ -372,7 +372,7 @@ body {
     flex: 1 0 350px;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
-    transform: translateY(100px);
+    transform: translatey(200px);
     opacity: 0;
     scale: .8;
     cursor: none;
