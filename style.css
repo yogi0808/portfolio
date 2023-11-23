@@ -147,6 +147,22 @@ body {
     stroke-dashoffset: -90;
 }
 
+.red {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #ff382a;
+    filter: blur(60px);
+}
+
+.yellow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #f5a83d;
+    filter: blur(60px);
+}
+
 #home {
     width: 100%;
     height: 100vh;
@@ -184,23 +200,13 @@ body {
 }
 
 #home .hero-text .bg-dotes .red {
-    position: absolute;
-    width: 150px;
-    height: 150px;
     right: 0;
     top: 0;
-    background-color: #ff382a;
-    filter: blur(60px);
 }
 
 #home .hero-text .bg-dotes .yellow {
-    position: absolute;
-    width: 150px;
-    height: 150px;
     left: 0;
     bottom: 0;
-    background-color: #f5a83d;
-    filter: blur(60px);
 }
 
 #home .hero-img {
@@ -292,23 +298,13 @@ body {
 }
 
 #about .img .bg-color .red {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
-    background-color: #ff382a;
-    filter: blur(60px);
 }
 
 #about .img .bg-color .yellow {
-    position: absolute;
     bottom: 0;
     right: 0;
-    width: 150px;
-    height: 150px;
-    background-color: #f5a83d;
-    filter: blur(60px);
 }
 
 #about .info {
@@ -408,7 +404,107 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+#contact {
+    padding: 2rem;
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+}
 
+#contact .text {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contact .text .bg-circul {
+    position: absolute;
+    height: 250px;
+    width: 280px;
+    z-index: -1;
+    animation: rotate-img 20s linear infinite;
+}
+
+#contact .text .bg-circul .red {
+    top: 0;
+    left: 0;
+}
+
+#contact .text .bg-circul .yellow {
+    bottom: 0;
+    right: 0;
+}
+
+#contact .text .ids {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact .text .ids p {
+    display: flex;
+    gap: 5px;
+}
+
+#contact .form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 2rem;
+}
+
+#contact .form h2 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+#contact .form textarea,
+#contact .form input {
+    padding: 10px;
+    font-size: 1rem;
+    color: #dadada;
+    width: 90%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#contact .form textarea:focus,
+#contact .form input:focus {
+    border: none;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+#contact .form .sbtn {
+    color: #dadada;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#contact .form .sbtn:hover {
+    background: linear-gradient(45deg, rgba(255, 56, 42, .4) 0%, rgba(245, 168, 61, .5) 100%);
+
+}
 
 .demo {
     height: 100vh;
@@ -472,7 +568,6 @@ body {
     #home .hero-img {
         width: 100%;
         height: 50vh;
-        overflow: hidden;
     }
 
     #home .hero-img img {
@@ -506,6 +601,20 @@ body {
         padding: 2rem 1rem;
     }
 
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact .text {
+        width: 100%;
+        height: auto;
+    }
+
+    #contact .form {
+        width: 100%;
+        height: auto;
+    }
+
 }
 
 @media (max-width: 430px) {
@@ -516,6 +625,11 @@ body {
 
     #home .hero-text .logo-space {
         font-size: 4.8rem
+    }
+
+    #home .hero-img img {
+        width: 70%;
+        height: auto;
     }
 
     #about .img img {
@@ -544,11 +658,9 @@ body {
         width: 300px;
     }
 
+    #contact .form {
+        gap: 15px;
+        padding: 2rem 0;
+    }
+
 }
-
-
-/* background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18); */
