@@ -2,11 +2,11 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
 
     // window resize reload
-    window.addEventListener("resize", function () {
-        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (width <= 2560) window.location.reload();
-        console.log("resize")
-    });
+    // window.addEventListener("resize", function () {
+    //     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    //     if (width <= 2560) window.location.reload();
+    //     console.log("resize")
+    // });
 
     // lenis smooth scroll
     const lenis = new Lenis({

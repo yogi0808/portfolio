@@ -664,4 +664,9 @@ body {
         padding: 2rem 0;
     }
 
+    #contact .form textarea,
+    #contact .form input {
+        width: 100%;
+    }
+
 }
