@@ -334,7 +334,7 @@ body {
 #work {
     width: 100%;
     margin-top: 60px;
-    padding: 2rem 2rem;
+    padding: 2rem;
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -358,49 +358,37 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-#work .projects {
+#work .pro {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    transition: all .5s ease-out;
 }
 
-#work .projects .project {
-    flex: 1 0 250px;
-    height: 300px;
-    padding: 10px;
-    display: flex;
-    align-items: end;
-    background-position: top left;
-    background-size: 100%;
+#work .pro .project {
+    position: relative;
+    flex: 1 0 350px;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    scale: .8;
     cursor: none;
-    transition: all .7s ease-out;
 }
 
-#work .projects .project:hover {
-    background-size: 120%;
+#work .pro .project img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
 }
 
-#work .projects .project:nth-child(1) {
-    background-image: url("img/project\ img/6.png");
-}
-
-#work .projects .project:nth-child(2) {
-    background-image: url("img/project\ img/rock paper scissors.png");
-    background-position: center center;
-}
-
-#work .projects .project.light h3 {
-    color: #dadada;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-#work .projects .project h3 {
+#work .pro .project h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
     padding: 5px 10px;
     color: #000;
     background: rgba(0, 0, 0, 0.2);
@@ -410,6 +398,17 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.18);
     border-radius: 10px;
 }
+
+#work .pro .project.light h3 {
+    color: #dadada;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
 
 .demo {
     height: 100vh;
@@ -473,6 +472,7 @@ body {
     #home .hero-img {
         width: 100%;
         height: 50vh;
+        overflow: hidden;
     }
 
     #home .hero-img img {
@@ -529,6 +529,19 @@ body {
     #about .info p {
         font-size: 1rem;
         line-height: 0.8;
+    }
+
+    #work .title h1 {
+        font-size: 3rem;
+    }
+
+    #work .pro .project {
+        flex: 1 0 300px;
+    }
+
+    #about .img .bg-color {
+        height: 500px;
+        width: 300px;
     }
 
 }

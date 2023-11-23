@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         project.addEventListener("mouseenter", () => {
             mouse.style.scale = 4
             mouse.classList.add('arrow')
+
         })
         project.addEventListener("mouseleave", () => {
             mouse.style.scale = 1
@@ -239,6 +240,26 @@ document.addEventListener("DOMContentLoaded", () => {
             scrub: 2,
         }
     })
+
+    let pros = gsap.utils.toArray(".project");
+
+    gsap.to(pros, {
+        opacity: 1,
+        y: 0,
+        ease: "none",
+        scale: 1,
+        scrollTrigger: {
+            trigger: ".project",
+            scrub: 2,
+            start: "-40% 85%",
+            end: "40% bottom",
+            scrub: 2,
+            // markers: true,
+        }
+
+    })
+
+
 
 
 
