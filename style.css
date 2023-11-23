@@ -603,6 +603,7 @@ body {
 
     #contact {
         flex-direction: column;
+        height: auto;
     }
 
     #contact .text {
