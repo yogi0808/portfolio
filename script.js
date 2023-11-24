@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pro = document.querySelector(".pro");
 
     // mouse circul
-    let mouseX = -25
-    let mouseY = -25
+    let mouseX = -200
+    let mouseY = -200
 
     window.addEventListener("mousemove", (e) => {
 
@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 0,
         scrollTrigger: {
             trigger: ".svgs",
-            start: "-30% 85%",
-            end: "bottom bottom",
+            start: "-40% 85%",
+            end: "bottom 85%",
             scrub: 2,
             // markers: true,
         }

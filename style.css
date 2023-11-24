@@ -37,8 +37,8 @@ body {
     background-color: #f5a83d;
     mix-blend-mode: difference;
     position: fixed;
-    top: -25px;
-    left: -25px;
+    top: -200px;
+    left: -200px;
     border-radius: 50%;
     transition: all 0.5s ease-out;
     pointer-events: none;
@@ -93,8 +93,7 @@ body {
 .nav .nav-links {
     display: flex;
     gap: 30px;
-    transition: all 1s ease-in-out;
-    /* z-index: 3; */
+    transition: all .5s ease-in-out;
 }
 
 .nav .nav-links.active {
@@ -625,7 +624,7 @@ body {
     }
 
     #home .hero-text .logo-space {
-        font-size: 4.8rem
+        font-size: 4rem;
     }
 
     #home .hero-img img {
