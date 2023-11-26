@@ -1,12 +1,7 @@
+import { works } from "../data/works.js";
+
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
-
-    // window resize reload
-    // window.addEventListener("resize", function () {
-    //     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    //     if (width <= 2560) window.location.reload();
-    //     console.log("resize")
-    // });
 
     // lenis smooth scroll
     const lenis = new Lenis({
@@ -69,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderProject() {
         works.forEach(work => {
             proHTML += `
-            <div class="project ${work.class}" onclick="window.location.href='hello.html'">
+            <div class="project ${work.class}" data-id="${work.id}">
                 <img src="${work.mimg}" alt="project">
                 <h3>${work.pname}</h3>
             </div>
@@ -79,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // onclick=""
 
     // nav link circle scale
     links.forEach(link => {
@@ -142,6 +138,13 @@ document.addEventListener("DOMContentLoaded", () => {
         pro.addEventListener("mouseleave", () => {
             mouse.style.scale = 1
             mouse.classList.remove('arrow')
+        })
+
+        pro.addEventListener("click", (clickID) => {
+            clickID = pro.dataset.id
+
+            window.location.href = 'project.html';
+            console.log(clickID)
         })
 
     })

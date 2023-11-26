@@ -46,8 +46,8 @@ body {
 }
 
 .mouse-circul .arrow {
-    display: none;
     rotate: 45deg;
+    display: none;
 }
 
 .mouse-circul.arrow .arrow {
