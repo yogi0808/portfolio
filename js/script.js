@@ -1,5 +1,11 @@
 import { works } from "../data/works.js";
 
+export let singleProject;
+
+function saveToStorage() {
+    localStorage.setItem('singleProject', JSON.stringify(singleProject))
+}
+
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -140,14 +146,34 @@ document.addEventListener("DOMContentLoaded", () => {
             mouse.classList.remove('arrow')
         })
 
-        pro.addEventListener("click", (clickID) => {
-            clickID = pro.dataset.id
+        pro.addEventListener("click", () => {
 
+            console.log(pro.dataset.id)
+
+            works.forEach(work => {
+                if (pro.dataset.id === work.id) {
+                    singleProject = work;
+                    console.log(singleProject)
+                }
+            })
+
+            saveToStorage();
             window.location.href = 'project.html';
-            console.log(clickID)
         })
 
     })
+
+
+    // function machingProData() {
+
+    //     console.log(pro.dataset.id)
+
+    //     works.forEach(work => {
+    //         if (dataset.id === work.id) {
+
+    //         }
+    //     })
+    // }
 
 
     // about img circle blend mode chenge

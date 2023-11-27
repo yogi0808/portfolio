@@ -1,9 +1,29 @@
-import { works } from "../data/works.js";
-
-
-
 gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener("DOMContentLoaded", () => {
+    let projectData = JSON.parse(localStorage.getItem('singleProject'));
+
+    if (!projectData) {
+
+        projectData = [{
+            id: "1",
+            mimg: "img/luxury photo & frames/6.webp",
+            pname: "Luxury Photo & Frames",
+            ditail: "Designed and developed an online platform dedicated to photography and framing services. Created an intuitive interface allowing Users to explore a wide range of photography options and custom framing solutions. Implemented a user-friendly Gallery showcasing high-quality Images, accompanied by a seamless ordering process for frames tailored to individual preferences. Prioritized user experience by integrating Responsive Design, enabling smooth navigation across devices for an Immersive Visual Experience.",
+            technologies: "PHP, HTML, CSS, JavaScript, MYSQL",
+            imgs: {
+                img1: "img/luxury photo & frames/1.png",
+                img2: "img/luxury photo & frames/2.png",
+                img3: "img/luxury photo & frames/3.png",
+                img4: "img/luxury photo & frames/4.png",
+                img5: "img/luxury photo & frames/5.png",
+            },
+        }];
+
+    }
+
+
+
 
     // lenis smooth scroll
     const lenis = new Lenis({
@@ -26,41 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let html = "";
 
-    let clickID = 1;
 
     function generateHTML() {
 
-        works.forEach(work => {
-            if (clickID === work.id) {
-                html = `
+        html = `
                 <section class="ditail">
                 <div class="text">
-                    <h1>${work.pname}</h1>
-                    <p>${work.ditail}</p>
+                    <h1>${projectData.pname}</h1>
+                    <p>${projectData.ditail}</p>
                 </div>
                 <div class="text2">
                     <div class="technologies">
                         <hr>
                         <h2>Technologies</h2>
-                        <p>${work.technologies}</p>
+                        <p>${projectData.technologies}</p>
                     </div>
                 </div>
             </section>
 
             <section class="project-img">
-                <img class="main-img" src="${work.imgs.img1}" alt="">
+                <img class="main-img" src="${projectData.imgs.img1}" alt="">
             </section>
 
             <div class="img-list">
-                <div class="img"><img class="small-img" src="${work.imgs.img1}" alt=""></div>
-                <div class="img"><img class="small-img" src="${work.imgs.img2}" alt=""></div>
-                <div class="img"><img class="small-img" src="${work.imgs.img3}" alt=""></div>
-                <div class="img"><img class="small-img" src="${work.imgs.img4}" alt=""></div>
-                <div class="img"><img class="small-img" src="${work.imgs.img5}" alt=""></div>
+                <div class="img"><img class="small-img" src="${projectData.imgs.img1}" alt=""></div>
+                <div class="img"><img class="small-img" src="${projectData.imgs.img2}" alt=""></div>
+                <div class="img"><img class="small-img" src="${projectData.imgs.img3}" alt=""></div>
+                <div class="img"><img class="small-img" src="${projectData.imgs.img4}" alt=""></div>
+                <div class="img"><img class="small-img" src="${projectData.imgs.img5}" alt=""></div>
             </div>
                 `
-            }
-        })
 
         return html
 
@@ -68,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     generateHTML()
 
-    wraper.innerHTML = html
+    wraper.innerHTML = html;
 
 
 
@@ -192,5 +207,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".small-img")[10].onclick = () => {
         document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[10].src
     }
-
 });

@@ -17,4 +17,9 @@ export const works = [
         mimg: "img/project img/rock paper scissors.webp",
         pname: "Rock Paper Scissors Game",
         class: "light",
+        ditail: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum voluptate saepe nihil temporibus quis veniam ex vel iste mollitia dolore vero ea, rem harum, pariatur aspernatur deleniti! Corporis iure repellendus error doloribus rerum aspernatur, voluptates ipsum dolore consequatur, enim amet ullam modi quo illum officiis, reprehenderit exercitationem provident animi? Quasi.",
+        technologies: "HTML, CSS, JavaScript",
+        imgs: {
+            img1: "img/project img/rock paper scissors.webp",
+        }
     },]
