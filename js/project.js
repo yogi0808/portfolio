@@ -43,9 +43,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const mouse = document.querySelector('.mouse-circul');
     const links = document.querySelectorAll('.nav-links li')
     const wraper = document.querySelector('.wraper');
+    const menuBtn = document.querySelector(".menu-btn");
+    const menu = document.querySelector(".nav-links");
 
     let html = "";
 
+
+    // for nav menu btn
+    menuBtn.addEventListener("click", () => {
+        const currentState = menuBtn.getAttribute("data-state");
+
+        if (!currentState || currentState === "closed") {
+            menuBtn.setAttribute("data-state", "opened");
+            menuBtn.setAttribute("aria-expanded", "true");
+        } else {
+            menuBtn.setAttribute("data-state", "closed");
+            menuBtn.setAttribute("aria-expanded", "false");
+        }
+
+        menu.classList.toggle("active")
+
+    });
 
     function generateHTML() {
 
