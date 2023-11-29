@@ -164,16 +164,41 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
-    // function machingProData() {
 
-    //     console.log(pro.dataset.id)
+    document.getElementById("submit-btn").addEventListener("click", () => {
+        sendMessage();
 
-    //     works.forEach(work => {
-    //         if (dataset.id === work.id) {
+    })
 
-    //         }
-    //     })
-    // }
+    function sendMessage() {
+
+        (function () {
+            emailjs.init("a7gNHaSCLxUg4q4oT");
+        })();
+
+        var params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        const serviceID = "service_rapdf4q";
+        const templateID = "template_uxye17i";
+
+        emailjs.send(serviceID, templateID, params)
+            .then(res => {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+                console.log(res);
+                alert("Thakn you, " + params["name"] + "! Your message has been sent.")
+
+            })
+            .catch(err => console.log(err));
+    }
+
 
 
     // about img circle blend mode chenge
