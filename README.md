@@ -1,3 +1,3 @@
 #My Portfolio Website
 
-[Visite My Portfolio](https://yogi0808.github.io/portfolio/)
+[Visit My Portfolio](https://yogi0808.github.io/portfolio/)
