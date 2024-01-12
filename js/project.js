@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector(".nav-links");
 
     let html = "";
+    let iData = "";
+    let selectedImage = projectData.imgs[0];
 
 
     // for nav menu btn
@@ -67,6 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function generateHTML() {
 
+        console.log(selectedImage)
+
+        projectData.imgs.forEach(img => {
+
+            iData += `
+            <div class="img"><img class="small-img" src="${img}" alt=""></div>
+            `
+        })
+
         html = `
                 <section class="ditail">
                 <div class="text">
@@ -83,15 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
             </section>
 
             <section class="project-img">
-                <img class="main-img" src="${projectData.imgs.img1}" alt="">
+                <img class="main-img" src="${selectedImage}" alt="">
             </section>
 
             <div class="img-list">
-                <div class="img"><img class="small-img" src="${projectData.imgs.img1}" alt=""></div>
-                <div class="img"><img class="small-img" src="${projectData.imgs.img2}" alt=""></div>
-                <div class="img"><img class="small-img" src="${projectData.imgs.img3}" alt=""></div>
-                <div class="img"><img class="small-img" src="${projectData.imgs.img4}" alt=""></div>
-                <div class="img"><img class="small-img" src="${projectData.imgs.img5}" alt=""></div>
+                ${iData}
             </div>
                 `
 
@@ -192,37 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // for photo chenge onclick
-    document.querySelectorAll(".small-img")[0].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[0].src
-    }
-    document.querySelectorAll(".small-img")[1].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[1].src
-    }
-    document.querySelectorAll(".small-img")[2].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[2].src
-    }
-    document.querySelectorAll(".small-img")[3].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[3].src
-    }
-    document.querySelectorAll(".small-img")[4].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[4].src
-    }
-    document.querySelectorAll(".small-img")[5].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[5].src
-    }
-    document.querySelectorAll(".small-img")[6].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[6].src
-    }
-    document.querySelectorAll(".small-img")[7].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[7].src
-    }
-    document.querySelectorAll(".small-img")[8].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[8].src
-    }
-    document.querySelectorAll(".small-img")[9].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[9].src
-    }
-    document.querySelectorAll(".small-img")[10].onclick = () => {
-        document.querySelector(".main-img").src = document.querySelectorAll(".small-img")[10].src
-    }
+    var allImage = document.querySelectorAll(".small-img");
+
+    allImage.forEach(img => {
+
+        img.addEventListener("click", () => {
+            document.querySelector(".main-img").src = img.src
+        })
+
+    })
 });
