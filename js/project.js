@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let html = "";
     let iData = "";
+    let link = "";
     let selectedImage = projectData.imgs[0];
 
 
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <section class="ditail">
                 <div class="text">
                     <h1>${projectData.pname}</h1>
-                    <p>${projectData.ditail}</p>
+                    <p>${projectData.ditail}<br> <a class="link" href="${projectData.link}">Link.</a> </p>
                 </div>
                 <div class="text2">
                     <div class="technologies">
