@@ -364,6 +364,7 @@ body {
 
 #work .pro .project {
     position: relative;
+    max-width: 470px;
     flex: 1 0 350px;
     aspect-ratio: 16 / 9;
     border-radius: 10px;

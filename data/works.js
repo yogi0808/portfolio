@@ -37,5 +37,20 @@ export const works = [
             "img/todo_app/3_image_of_todo_app.jpg",
             "img/todo_app/second_image_of_todo_app.jpg",
         ]
+    }, {
+        id: "4",
+        mimg: "img/youtube/Screenshot 2024-01-13 170418.png",
+        pname: "Youtube Home Page",
+        class: "light",
+        ditail: "Welcome to my custom YouTube homepage! 🎉 I've recreated the iconic YouTube interface using HTML, CSS, and JavaScript, and I'm excited to share it with you.",
+        technologies: "HTML, CSS, JavaScript",
+        link: "https://github.com/yogi0808/youtube.git",
+        imgs: [
+            "img/youtube/Screenshot 2024-01-13 170418.png",
+            "img/youtube/Screenshot 2024-01-13 170619.png",
+            "img/youtube/Screenshot 2024-01-13 170602.png",
+            "img/youtube/Screenshot 2024-01-13 170519.png",
+            "img/youtube/Screenshot 2024-01-13 170531.png",
+        ]
     }
 ]
