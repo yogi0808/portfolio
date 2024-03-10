@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <section class="ditail">
                 <div class="text">
                     <h1>${projectData.pname}</h1>
-                    <p>${projectData.ditail}<br> <a class="link" href="${projectData.link}">Link.</a> </p>
+                    <p>${projectData.ditail}<br> ${projectData.link == "#" ? " " : `<a class="link" href="${projectData.link}">Link.</a>`}  </p>
                 </div>
                 <div class="text2">
                     <div class="technologies">
