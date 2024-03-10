@@ -32,6 +32,66 @@ body {
     background-color: transparent;
 }
 
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader .sub-loader {
+    position: relative;
+    height: 65px;
+    width: 65px;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.loader .sub-loader::before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    background-color: #ff382a;
+    -webkit-filter: blur(60px);
+    filter: blur(20px);
+}
+
+.loader .sub-loader::after {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    bottom: 0;
+    right: 0;
+    background-color: #f5a83d;
+    -webkit-filter: blur(60px);
+    filter: blur(20px);
+}
+
 .right {
     rotate: -90deg;
 }
