@@ -92,7 +92,7 @@ body {
     filter: blur(20px);
 }
 
-.mouse-circul {
+.mouse-circle {
     height: 25px;
     width: 25px;
     background-color: #f5a83d;
@@ -108,12 +108,12 @@ body {
     z-index: 1000;
 }
 
-.mouse-circul .arrow {
+.mouse-circle .arrow {
     rotate: 45deg;
     display: none;
 }
 
-.mouse-circul.arrow .arrow {
+.mouse-circle.arrow .arrow {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -594,7 +594,7 @@ body {
     gap: 20px;
 }
 
-#contact .text .bg-circul {
+#contact .text .bg-circle {
     position: absolute;
     height: 250px;
     width: 280px;
@@ -603,12 +603,12 @@ body {
     animation: rotate-img 20s linear infinite;
 }
 
-#contact .text .bg-circul .red {
+#contact .text .bg-circle .red {
     top: 0;
     left: 0;
 }
 
-#contact .text .bg-circul .yellow {
+#contact .text .bg-circle .yellow {
     bottom: 0;
     right: 0;
 }

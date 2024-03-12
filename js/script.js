@@ -34,7 +34,7 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-const mouse = document.querySelector('.mouse-circul');
+const mouse = document.querySelector('.mouse-circle');
 const logo = document.querySelector(".logo");
 const links = document.querySelectorAll("ul li a");
 const menuBtn = document.querySelector(".menu-btn");
@@ -42,7 +42,7 @@ const menu = document.querySelector(".nav-links");
 const svgs = document.querySelectorAll(".svg");
 const pro = document.querySelector(".pro");
 
-// mouse circul
+// mouse circle
 let mouseX = -200
 let mouseY = -200
 
@@ -211,7 +211,7 @@ function sendMessage() {
             document.getElementById("subject").value = "";
             document.getElementById("message").value = "";
             console.log(res);
-            alert("Thakn you, " + params["name"] + "! Your message has been sent.")
+            alert("Thank you, " + params["name"] + "! Your message has been sent.")
 
         })
         .catch(err => console.log(err));
@@ -219,14 +219,13 @@ function sendMessage() {
 
 
 
-// about img circle blend mode chenge
+// about img circle blend mode cheng
 document.querySelector("#about .img img").addEventListener("mouseenter", () => {
     mouse.style.mixBlendMode = 'normal'
 })
 document.querySelector("#about .img img").addEventListener("mouseleave", () => {
     mouse.style.mixBlendMode = 'difference'
 })
-
 
 
 // svg circle scale
