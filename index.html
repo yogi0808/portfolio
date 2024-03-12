@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>potfolio</title>
+    <title>portfolio</title>
 </head>
 
 <body>
@@ -26,7 +26,6 @@
     <a href="#" class="logo">
         Yogesh
     </a>
-
 
     <section class="nav">
 
@@ -315,12 +314,32 @@
 
         <div class="form">
             <h2>#let's_talk</h2>
-            <input id="name" name="name" type="text" placeholder="Enter your Name" title="Enter your Name">
-            <input id="email" name="email" type="email" placeholder="Enter your E-mail" title="Enter your E-mail">
-            <input id="subject" name="subject" type="text" placeholder="Subject" title="Enter Subject">
-            <textarea id="message" name="message" cols="30" rows="10" placeholder="Leave your Message here..."
-                title="Enter your Message"></textarea>
-            <button id="submit-btn" class="sbtn">Submit</button>
+            <label for="name" class="label">
+                <span class="label-title">Name</span>
+                <input id="name" name="name" placeholder="Enter your Name" type="text" title="Enter your Name">
+            </label>
+            <label for="email" class="label">
+                <span class="label-title">E-mail</span>
+                <input id="email" name="email" placeholder="Enter your E-mail" type="text" title="Enter your E-mail">
+            </label>
+            <label for="subject" class="label">
+                <span class="label-title">Subject</span>
+                <input id="subject" name="subject" placeholder="Enter a Subject" type="text" title="Enter Subject">
+            </label>
+            <label for="message" class="label">
+                <span class="label-title">Message</span>
+                <!-- <input id="message" name="message" placeholder="Leave your Message here..." type="text"> -->
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="Leave your Message here..."
+                    title="Enter your Message"></textarea>
+            </label>
+            <button id="submit-btn" class="sbtn">
+                Submit
+                <div class="hoverEffect">
+                    <div>
+                    </div>
+                </div>
+            </button>
+            <!-- <button id="submit-btn" class="sbtn">Submit</button> -->
         </div>
     </section>
 

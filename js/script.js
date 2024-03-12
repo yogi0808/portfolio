@@ -182,6 +182,14 @@ document.getElementById("submit-btn").addEventListener("click", () => {
 
 function sendMessage() {
 
+    if (document.getElementById("name").value == "" ||
+        document.getElementById("email").value == "" ||
+        document.getElementById("subject").value == "" ||
+        document.getElementById("message").value == "") {
+        return alert("Some Form Fields are Empty!")
+    }
+
+
     (function () {
         emailjs.init("a7gNHaSCLxUg4q4oT");
     })();
