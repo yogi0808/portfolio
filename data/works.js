@@ -3,7 +3,7 @@ export const works = [
         id: "1",
         mimg: "img/luxury photo & frames/6.webp",
         pname: "Luxury Photo & Frames",
-        ditail: "Designed and developed an online platform dedicated to photography and framing services. Created an intuitive interface allowing Users to explore a wide range of photography options and custom framing solutions. Implemented a user-friendly Gallery showcasing high-quality Images, accompanied by a seamless ordering process for frames tailored to individual preferences. Prioritized user experience by integrating Responsive Design, enabling smooth navigation across devices for an Immersive Visual Experience.",
+        ditail: "Welcome to our online haven where memories meet artistry – a premier destination for those seeking to adorn their spaces with timeless elegance and personal flair. Explore our curated collection of captivating photographs spanning from awe-inspiring landscapes to intimate portraits, each carefully selected to evoke emotion and inspiration. Complementing our images are our meticulously crafted frames, ranging from modern minimalism to classic opulence, providing the perfect setting to showcase your cherished moments. With seamless navigation, secure checkout, and prompt delivery, transforming your space with sophistication and style has never been easier. Join us in capturing life's most precious moments, one frame at a time. Welcome to our world of photos and frames – where memories are immortalized and dreams take shape.",
         technologies: "PHP, HTML, CSS, JavaScript, MYSQL",
         link: "#",
         imgs: [
