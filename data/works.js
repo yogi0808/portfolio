@@ -60,12 +60,12 @@ export const works = [
         technologies: "Flutter, Dart, Firebase, RESTful APIs",
         link: "#",
         imgs: [
-            "img/luxury_app/lp2.png",
-            "img/luxury_app/lp3.png",
-            "img/luxury_app/lp4.png",
-            "img/luxury_app/lp5.png",
-            "img/luxury_app/lp6.png",
-            "img/luxury_app/lp7.png",
+            "img/luxury_app/lp2.jpg",
+            "img/luxury_app/lp3.jpg",
+            "img/luxury_app/lp4.jpg",
+            "img/luxury_app/lp5.jpg",
+            "img/luxury_app/lp6.jpg",
+            "img/luxury_app/lp7.jpg",
         ]
     }
 ]
