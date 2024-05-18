@@ -52,5 +52,20 @@ export const works = [
             "img/youtube/Screenshot 2024-01-13 170519.png",
             "img/youtube/Screenshot 2024-01-13 170531.png",
         ]
+    }, {
+        id: "5",
+        mimg: "img/luxury_app/lp1.png",
+        pname: "Luxury E-commerce Application",
+        ditail: "I developed a comprehensive e-commerce application using Flutter for the frontend and Firebase for the backend, offering a seamless shopping experience on both Android and iOS platforms. The app features user profile management, allowing users to update personal information and securely handle authentication through Firebase. It includes a robust shopping cart system with real-time price calculations, a wishlist for saving future purchases, and brand-specific product browsing. Users can navigate products through detailed categories and sub-categories. Order management features allow users to place, track, and review their orders, while address management supports multiple addresses with easy updates and validations. The application ensures real-time data synchronization and security, enhanced by Firebase Cloud Messaging for push notifications. This project showcases my ability to create user-friendly, responsive, and secure e-commerce solutions.",
+        technologies: "Flutter, Dart, Firebase, RESTful APIs",
+        link: "#",
+        imgs: [
+            "img/luxury_app/lp2.png",
+            "img/luxury_app/lp3.png",
+            "img/luxury_app/lp4.png",
+            "img/luxury_app/lp5.png",
+            "img/luxury_app/lp6.png",
+            "img/luxury_app/lp7.png",
+        ]
     }
 ]
